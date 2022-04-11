@@ -1,0 +1,114 @@
+:root {
+  --success-color: #2ecc71;
+  --error-color: #e74c3c;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  display: flex;
+  font-family: sans-serif;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  color: #555;
+  border-color: #f9fafb;
+}
+
+.container {
+  background-color: #fff;
+  width: 40rem;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+  border-radius: 0.6rem;
+}
+
+.heading {
+  font-size: 2.4rem;
+  margin-bottom: 1.6rem;
+  text-align: center;
+}
+
+.form {
+  padding: 3rem 4rem;
+}
+
+.form-control {
+  margin-bottom: 1.2rem;
+}
+
+.form-control label {
+  display: block;
+  font-size: 1.6rem;
+  margin-bottom: 0.8rem;
+}
+
+.form-control input {
+  width: 100%;
+  display: block;
+  margin-bottom: 2px;
+  padding: 1rem;
+  font-size: 1.4rem;
+  border: 2px solid #f0f0f0;
+  border-radius: 4px;
+}
+
+.form-control input:focus {
+  outline: none !important;
+  border-color: #777;
+}
+
+.form-control.error input {
+  border-color: var(--error-color);
+}
+
+.form-control.success input {
+  border-color: var(--success-color);
+}
+
+.form-control small {
+  display: block;
+  margin-top: 0.8rem;
+  font-size: 1.1rem;
+  color: var(--error-color);
+  visibility: hidden;
+}
+
+.form-control.error small {
+  visibility: visible;
+}
+
+.submit {
+  display: block;
+  width: 100%;
+  padding: 0.8rem 1.6rem;
+  font-size: 1.8rem;
+  border: 2px solid #4c6ef5;
+  text-transform: uppercase;
+  cursor: pointer;
+  color: white;
+  font-weight: bold;
+  background-color: #4c6ef5;
+  border-radius: 5px;
+  border: none;
+  margin-top: 1.6rem;
+  transition: all 0.3s ease;
+}
+
+.submit:hover {
+  background-color: #364fc7;
+}
+
+@media (max-width: 28rem) {
+  .container {
+    width: 90%;
+  }
+}
